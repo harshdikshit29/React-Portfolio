@@ -72,10 +72,10 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-slate-850 text-center flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-3">
         <p>© {new Date().getFullYear()} Harsh Dikshit. All rights reserved.</p>
-        <p className="flex items-center gap-1 font-mono">
+        {/* <p className="flex items-center gap-1 font-mono">
           <Code2 className="w-3.5 h-3.5 text-cyan-500/70" />
           <span>Vite + React 19 + Tailwind CSS</span>
-        </p>
+        </p> */}
       </div>
     </footer>
   );

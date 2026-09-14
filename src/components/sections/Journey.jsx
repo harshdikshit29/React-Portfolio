@@ -77,9 +77,9 @@ export function Journey() {
         </div>
 
         {/* Note on data customization */}
-        <div className="mt-12 text-center text-xs font-mono text-slate-500">
+        {/* <div className="mt-12 text-center text-xs font-mono text-slate-500">
           * Timeline data is centrally managed in <code className="text-cyan-400/80">src/data/portfolioData.js</code> for effortless updates.
-        </div>
+        </div> */}
 
       </div>
     </section>
