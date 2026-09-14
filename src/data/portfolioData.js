@@ -13,7 +13,7 @@ export const personalInfo = {
   status: "Available for full-stack opportunities",
   availabilityText: "Available for Full-Stack & Engineering Roles",
   location: "Open to Remote & On-site",
-  resumePath: "/resume/Harsh-Dikshit-Resume.pdf",
+  resumePath: "/resume/Harsh%20Dikshit.pdf",
   bio: [
     "I am a Full-Stack Software Developer with hands-on experience designing and building complete software products from user-facing interfaces to relational database architectures.",
     "My engineering approach centers on pragmatic architecture: crafting fluid, accessible React and Flutter frontends, architecting resilient REST APIs in Python (FastAPI) and Node.js (Express), enforcing role-based access control with JWT, and modeling robust relational schemas in MSSQL and MySQL.",
@@ -28,9 +28,9 @@ export const personalInfo = {
 };
 
 export const socialLinks = {
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  email: "harsh.dikshit.dev@gmail.com",
+  github: "https://github.com/harshdikshit29",
+  linkedin: "https://www.linkedin.com/in/harshdikshit29/",
+  email: "harshdikshit29@gmail.com",
   twitter: "https://x.com",
 };
 
@@ -119,7 +119,7 @@ export const projectsData = [
         resolution: "Implemented atomic database transactions to guarantee stock quantities update accurately when medication is prescribed, preventing concurrent double-booking."
       }
     ],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/harshdikshit29",
     liveUrl: null,
     metrics: [
       { label: "Access Roles", value: "4 Tiers" },
@@ -161,7 +161,7 @@ export const projectsData = [
         resolution: "Wrote structured relational queries and created targeted indexes on merchant IDs to minimize query latency on complex multi-table joins."
       }
     ],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/harshdikshit29",
     liveUrl: null,
     metrics: [
       { label: "Client Target", value: "Android & iOS" },
@@ -203,7 +203,7 @@ export const projectsData = [
         resolution: "Structured extractors with adaptive selector hierarchies, randomized request intervals, and error isolation so one failed product page never halted the entire pipeline."
       }
     ],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/harshdikshit29",
     liveUrl: null,
     metrics: [
       { label: "Language", value: "Python 3" },

@@ -40,7 +40,8 @@ export function HeroConsole() {
     { type: 'output', text: COMMANDS.whoami }
   ]);
   
-  const terminalEndRef = useRef(null);
+  const isInitialMount = useRef(true);
+  const terminalContainerRef = useRef(null);
 
   const executeCommand = (rawCmd) => {
     const cmd = rawCmd.trim().toLowerCase();
@@ -69,8 +70,12 @@ export function HeroConsole() {
   };
 
   useEffect(() => {
-    if (activeTab === 'terminal') {
-      terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (activeTab === 'terminal' && terminalContainerRef.current) {
+      terminalContainerRef.current.scrollTop = terminalContainerRef.current.scrollHeight;
     }
   }, [history, activeTab]);
 
@@ -138,7 +143,7 @@ export function HeroConsole() {
           </div>
 
           {/* Terminal History */}
-          <div className="flex-1 overflow-y-auto space-y-2.5 pr-2">
+          <div ref={terminalContainerRef} className="flex-1 overflow-y-auto space-y-2.5 pr-2 scroll-smooth">
             {history.map((item, idx) => (
               <div key={idx} className="leading-relaxed">
                 {item.type === 'system' && (
@@ -157,7 +162,6 @@ export function HeroConsole() {
                 )}
               </div>
             ))}
-            <div ref={terminalEndRef} />
           </div>
 
           {/* Terminal Input Prompt */}

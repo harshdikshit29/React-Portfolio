@@ -26,6 +26,14 @@ export function App() {
   const { activeSection, hasScrolled } = useScrollSpy(SECTION_IDS, 160);
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
 
+  // Reset scroll to top on initial page load / refresh
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   // Subtle interactive mouse spotlight for desktop
   useEffect(() => {
     const handleMouseMove = (e) => {
